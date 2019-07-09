@@ -8,7 +8,8 @@ while stop == False:
 	try:
 		result = json.loads(r.text)
 		for fl in result['data']:
-			print(f.write(fl['id']+'\n'))
+			f.write(fl['id']+'\n')
+			print(fl['id']+'\n')
 		if result['paging']['next'] != '':
 			#code
 			print(result['paging']['next'])
